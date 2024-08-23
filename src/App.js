@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import FriendList from "./components/FriendList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const initialFriends = [
+	{
+		id: 123456,
+		name: "Alice",
+		image: "https://i.pravatar.cc/48?u=a042581f4e29026707d",
+		balance: 0,
+	},
+	{
+		id: 654321,
+		name: "Bob",
+		image: "https://i.pravatar.cc/48?u=a042581f4e29026706d",
+		balance: 10,
+	},
+	{
+		id: 987654,
+		name: "Charlie",
+		image: "https://i.pravatar.cc/48?u=a042581f4e29026705d",
+		balance: -10,
+	},
+];
+
+export default function App() {
+	return (
+		<div className="app">
+			<div className="sidebar">
+				<FriendList friends={initialFriends} />
+			</div>
+		</div>
+	);
 }
-
-export default App;
