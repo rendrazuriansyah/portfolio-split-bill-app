@@ -1,10 +1,10 @@
-export default function FormSplitBill() {
+export default function FormSplitBill({ selectedFriend }) {
 	return (
 		<form
 			action=""
 			className="form-split-bill"
 		>
-			<h2>Patungan Bareng si X</h2>
+			<h2>Patungan Bareng si {selectedFriend.name}</h2>
 
 			<label htmlFor="">💵Total Tagihan</label>
 			<input
@@ -20,7 +20,7 @@ export default function FormSplitBill() {
 				id=""
 			/>
 
-			<label htmlFor="">🙋🏻Tagihan X</label>
+			<label htmlFor="">🙋🏻Tagihan {selectedFriend.name}</label>
 			<input
 				type="text"
 				name=""
@@ -34,7 +34,7 @@ export default function FormSplitBill() {
 				id=""
 			>
 				<option value="user">Kamu</option>
-				<option value="friend">X</option>
+				<option value="friend">{selectedFriend.name}</option>
 			</select>
 
 			<button className="button">Tambah</button>

@@ -1,6 +1,6 @@
 import Friend from "./Friend";
 
-export default function FriendList({ friends, onSelected }) {
+export default function FriendList({ friends, onSelected, selectedFriend }) {
 	return (
 		<ul>
 			{friends.map((friend, index) => (
@@ -8,6 +8,7 @@ export default function FriendList({ friends, onSelected }) {
 					friend={friend}
 					key={index}
 					onSelected={onSelected}
+					selectedFriend={selectedFriend}
 				/>
 			))}
 		</ul>

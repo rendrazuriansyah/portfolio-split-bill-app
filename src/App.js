@@ -51,6 +51,7 @@ export default function App() {
 				<FriendList
 					friends={friends}
 					onSelected={handleSelectedFriend}
+					selectedFriend={selectedFriend}
 				/>
 				{showAddFriend && (
 					<FormAddFriend onAddFriend={handleAddFriend} />
@@ -62,7 +63,9 @@ export default function App() {
 					{showAddFriend ? "Tutup" : "Tambah Teman"}
 				</button>
 			</div>
-			{selectedFriend && <FormSplitBill />}
+			{selectedFriend && (
+				<FormSplitBill selectedFriend={selectedFriend} />
+			)}
 		</div>
 	);
 }

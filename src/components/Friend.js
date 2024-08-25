@@ -1,6 +1,8 @@
-export default function Friend({ friend, onSelected }) {
+export default function Friend({ friend, onSelected, selectedFriend }) {
+	const isSelected = selectedFriend?.id === friend.id;
+
 	return (
-		<li>
+		<li className={isSelected ? "selected" : ""}>
 			<img
 				src={friend.photo}
 				alt={friend.name}
@@ -24,7 +26,7 @@ export default function Friend({ friend, onSelected }) {
 				className="button"
 				onClick={() => onSelected(friend)}
 			>
-				Pilih
+				{isSelected?"Tutup":"Pilih"}
 			</button>
 		</li>
 	);
