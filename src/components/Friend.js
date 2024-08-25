@@ -2,7 +2,7 @@ export default function Friend({ friend }) {
 	return (
 		<li>
 			<img
-				src={friend.image}
+				src={friend.photo}
 				alt={friend.name}
 			/>
 			<h3>{friend.name}</h3>
